@@ -13,7 +13,7 @@ export const seats = Array.from({ length: TOTAL_SEATS }, (_, i) => ({
   isBooked: false,
 }));
 
-// Store bookings in-memory for the process lifetime.
+// Storing bookings in-memory for teh process lifetime
 export const bookings = new Map();
 
 let bookingCounter = 1;
