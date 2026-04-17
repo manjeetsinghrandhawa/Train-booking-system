@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL ?? "/api/v1/bookings";
+   "/api/v1/bookings";
 const NEW_BOOKING_HIGHLIGHT_MS = 1600;
 
 const readErrorMessage = async (response) => {
