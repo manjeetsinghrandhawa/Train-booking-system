@@ -1,13 +1,13 @@
-# Train Booking System
+Train Booking System
 
 This project contains a backend APIs and a React frontend for booking train seats with some strict rules and edge cases.
 
-## Project Structure
+ Project Structure
 
 - `backend/`: Express APIs with in-memory seat and booking data
 - `frontend/`: React (Vite) app for seat map, booking, and cancellation
 
-## How to Run Locally (Step by Step)
+ ---------------How to Run Locally (Step by Step)---------------------
 
 1. Clone the repository.
 2. Open a terminal in the project root.
@@ -24,7 +24,7 @@ This project contains a backend APIs and a React frontend for booking train seat
 
 Backend runs at `http://localhost:5000`.
 
-## Seat Selection Algorithm (Plain English)
+--------------Seat Selection Algorithm (Plain English)-----------------
 
 When a user requests seats, the system tries to keep seats as close to the front of the train as possible and follows these rules:
 
@@ -42,7 +42,7 @@ Important behavior:
 - The split is based on row adjacency, not seat-number proximity alone.
 - Booking count is limited to 1 to 7 seats per request.
 
-## Assumptions Made 
+---------------Assumptions Made-------------- 
 
 1. Data is in-memory only as we are not storing any real dataa in the database like mongodb or postgres.
 Reason: keeps implementation simple and fast for the assignment scope
@@ -51,11 +51,11 @@ Reason: keeps implementation simple and fast for the assignment scope
 Reason: there is no database persistence in this version. So everytime server goes down, it removes all in-memory data
 
 3. Maximum seats per booking is 7.
-Reason: this aligns with the backend validation and row-size constraints
+Reason: this aligns with the backend validation and row-size constraints adn as per the assignment's requirements
 
 4. Frontend booking history is fetched by `userId` entered in the UI.
 Reason: this matches available API design (`/bookings/:userId`) in the backedn
 
-## One Thing I Would Do Differently with More Time
+-----------One Thing I Would Do Differently with More Time-------------
 
-I would add persistent storage (for example PostgreSQL) and transactions so concurrent bookings are atomic and safe under high traffic, while preserving the same seat-allocation behavior.
+I would add persistent storage (for example PostgreSQL) and transactions so concurrent bookings are atomic and safe under high traffic, while preserving the same seat-allocation behavior. And would also love to set price for the seats and would add a payment integration from razorpay to book seats for user after successfull payment
