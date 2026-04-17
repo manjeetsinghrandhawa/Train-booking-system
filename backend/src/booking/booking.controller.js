@@ -5,6 +5,7 @@ import {
 	TOTAL_SEATS,
 } from "../../data/seatStore.js";
 
+//to get all seats API to know their status
 export const getSeatsController = (req, res, next) => {
 	try {
 		const rowsMap = new Map();
@@ -47,6 +48,7 @@ export const getSeatsController = (req, res, next) => {
 	}
 };
 
+//API to book seats per user according to user id and seats count
 export const bookSeatsController = (req, res, next) => {
 	try {
 		const { count, userId } = req.body ?? {};
@@ -151,6 +153,7 @@ export const bookSeatsController = (req, res, next) => {
 	}
 };
 
+//APi to cancel seats acording to booking id ex- b1, b2 per user
 export const cancelBookingController = (req, res, next) => {
 	try {
 		const { bookingId } = req.body ?? {};
@@ -189,6 +192,7 @@ export const cancelBookingController = (req, res, next) => {
 	}
 };
 
+//This API shows all the bookings of a user according to a userid to show the booking history
 export const getBookingsByUserController = (req, res, next) => {
 	try {
 		const { userId } = req.params;
