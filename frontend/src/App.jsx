@@ -233,6 +233,7 @@ const App = () => {
         </p>
       </header>
 
+        //Create booking left side section 
       <main className="layout-grid">
         <section className="card controls-card">
           <h2>Create Booking</h2>
@@ -288,6 +289,8 @@ const App = () => {
           </div>
         </section>
 
+        //Booking section of each user
+
         <section className="card history-card">
           <div className="card-heading">
             <h2>Booking History</h2>
@@ -322,6 +325,8 @@ const App = () => {
             ))}
           </ul>
         </section>
+
+        //Right side seats section in grid to know about the seats section
 
         <section className="card seatmap-card">
           <div className="card-heading">
